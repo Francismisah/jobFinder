@@ -11,25 +11,29 @@ const Navbar = () => {
   const handleCategorySelection = () => {
     setCategoriesContent(!categoriesContent);
   };
+
   return (
-    <nav className="max-container padding-container   mx-auto fixed top-6 right-0 left-0 z-[1000] justify-between">
-      <div className="flexCenter flexBetween px-6 flex items-center gap-24 bg-white rounded-full lg:border-2 lg:border-red-500 py-2">
-        {" "}
-        <Link href="/" className="flex items-center justify-center  ml-3">
-          <Image src="/logos.png" alt="logo" width={110} height={80} />
+    <nav className="max-container mx-auto fixed top-6 right-0 left-0 z-[1000] justify-between">
+      <div className="flexCenter bg-gray-600 bg-opacity-70 overflow-hidden flexBetween px-2 flex items-center gap-24  rounded-full py-1">
+        <Link href="/" className="flex items-center justify-center ml-3">
+          <Image src="/logo.png" alt="logo" width={90} height={60} />
         </Link>
+
+        {/* Desktop navigation links */}
         <ul className="hidden h-full gap-12 lg:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.key}>
               <Link
                 href={link.href}
-                className="regular-16 text-gray-50 flex-center cursor-pointer pb-1.5 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700"
+                className="regular-16 text-white flex-center cursor-pointer pb-1.5 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700"
               >
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
+
+        {/* Desktop action buttons/icons */}
         <div className="lg:flexCenter gap-3 hidden">
           <Link href="/signUp">
             <Button
@@ -39,14 +43,13 @@ const Navbar = () => {
               variant="btn_green"
             />
           </Link>
-          {/* user area */}
           <Link href="/accounts">
             <Image
               src="users1.svg"
               alt="menu"
               width={50}
               height={50}
-              className="cursor-pointer   rounded-full border-2 p-3 border-gray-500"
+              className="cursor-pointer rounded-full border-2 p-3 border-gray-500"
             />
           </Link>
           <Link href="/cart" className="hidden">
@@ -54,11 +57,12 @@ const Navbar = () => {
               type="button"
               title="Cart"
               icon="/whitecart.svg"
-              variant="btn_green  "
+              variant="btn_green"
             />
           </Link>
-          {/* mobile menu */}
-          <section className=" relative">
+
+          {/* Mobile menu toggle button */}
+          <section className="relative">
             <button onClick={handleCategorySelection}>
               {categoriesContent ? (
                 <div className="flexCenter gap-4 flex-row-reverse lg:hidden">
@@ -72,14 +76,13 @@ const Navbar = () => {
                 </div>
               ) : (
                 <div className="flexCenter gap-4 flex-row-reverse lg:hidden">
-                  {" "}
                   <Image
                     src="/menus.svg"
                     alt="menu"
                     width={50}
                     height={50}
                     className="inline-block btn_green cursor-pointer lg:hidden"
-                  />{" "}
+                  />
                 </div>
               )}
             </button>
@@ -87,8 +90,9 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile dropdown menu (conditionally rendered) */}
       {categoriesContent && (
-        <ul className="absolute top-14 gap-12 left-0 right-0 ml-2 mb-2 padding-container  justify-around py-12 md:hidden lg:hidden bg-white">
+        <ul className="absolute top-14 gap-12 left-0 right-0 ml-2 mb-2 padding-container justify-around py-12 md:hidden lg:hidden bg-white">
           <Link href="/">
             <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
               Home
@@ -96,22 +100,22 @@ const Navbar = () => {
           </Link>
           <Link href="/products">
             {" "}
-            <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2  transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
+            <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
               Shop
             </li>{" "}
           </Link>
           <Link href="/repairs">
-            <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2   transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
+            <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
               Repair
             </li>
           </Link>
           <Link href="/signUp">
-            <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2  transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
+            <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
               sign up
             </li>
           </Link>
           <Link href="/">
-            <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2  transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
+            <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
               My Orders
             </li>
           </Link>

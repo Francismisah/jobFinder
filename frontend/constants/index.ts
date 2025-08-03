@@ -1,6 +1,3 @@
-import { link } from "fs";
-import { href } from "react-router-dom";
-
 // NAVIGATION
 export interface NavLink {
   key: string;
@@ -9,13 +6,14 @@ export interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { key: "home", href: "/", label: "Home" },
-  { key: "repairs", href: "/repairs", label: "Repair" }, // This will navigate to /about
-  { key: "products", href: "/products", label: "Shop" }, // This will navigate to /contact
+  { key: "About", href: "/", label: "About" },
+  { key: "Jobs", href: "/job", label: "Jobs" },
+  { key: "Service", href: "/", label: "Service" } ,
+  { key: "Contact Us", href: "/contact", label: "Contact Us" }, 
 ];
 
 // CAMP SECTION
-export const PEOPLE_URL = ["/p1.jpg", "/p2.jpg", "/p3.jpg", "/p4.jpg"];
+export const PEOPLE_URL = ["/p1.jpg", "/p2.jpg", "/p3.jpg"];
 
 // FOOTER SECTION
 export const FOOTER_LINKS = [
