@@ -5,22 +5,24 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import FadeInOnScroll from "./FadeInOnScroll";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const router = useRouter();
 
-const handleScroll = useCallback((href: string) => {
-  const targetId = href.substring(1); // Remove the '#'
-  const targetElement = document.getElementById(targetId);
+  const handleScroll = useCallback(
+    (href: string) => {
+      const targetId = href.substring(1); // Remove the '#'
+      const targetElement = document.getElementById(targetId);
 
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-    // Optionally update the URL with the hash for better navigation
-    router.push(href, { scroll: false });
-  }
-}, [router]);
-
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        // Optionally update the URL with the hash for better navigation
+        router.push(href, { scroll: false });
+      }
+    },
+    [router]
+  );
 
   const [categoriesContent, setCategoriesContent] = useState(false);
 
@@ -84,7 +86,7 @@ const handleScroll = useCallback((href: string) => {
             {NAV_LINKS.map((link) => (
               <li key={link.key}>
                 <button
-                 onClick={() => handleScroll(link.href)}
+                  onClick={() => handleScroll(link.href)}
                   className="regular-16 text-black flex-center cursor-pointer pb-1.5 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-blue-700"
                 >
                   {link.label}
@@ -111,28 +113,26 @@ const handleScroll = useCallback((href: string) => {
                 <p className="bold-14 text-black">+234 704 019 2470</p>
               </div>
             </div>
-          
+
             {/* Mobile menu toggle button */}
-            <section className="relative">
+            <section className="">
               <button onClick={handleCategorySelection}>
                 {categoriesContent ? (
-                  <div className="flexCenter gap-4 flex-row-reverse lg:hidden">
-                    <Image
-                      src="/menus.svg"
-                      alt="menu"
-                      width={50}
-                      height={50}
-                      className="inline-block btn_green cursor-pointer lg:hidden"
+                  <div>
+                    <Button
+                      type="button"
+                      title="Get Started"
+                      icon="/mesu.svg"
+                      variant="btn_red"
                     />
                   </div>
                 ) : (
-                  <div className="flexCenter gap-4 flex-row-reverse lg:hidden">
-                    <Image
-                      src="/menus.svg"
-                      alt="menu"
-                      width={50}
-                      height={50}
-                      className="inline-block btn_green cursor-pointer lg:hidden"
+                  <div>
+                    <Button
+                      type="button"
+                      title="Get Started"
+                      icon="/mesu.svg"
+                      variant="btn_red"
                     />
                   </div>
                 )}
@@ -140,38 +140,26 @@ const handleScroll = useCallback((href: string) => {
             </section>
           </div>
         </div>
-
-        {/* Mobile dropdown menu (conditionally rendered) */}
-        {categoriesContent && (
-          <ul className="absolute top-14 gap-12 left-0 right-0 ml-2 mb-2 padding-container justify-around py-12 md:hidden lg:hidden bg-white">
-            <Link href="/">
-              <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
-                Home
-              </li>{" "}
-            </Link>
-            <Link href="/products">
-              {" "}
-              <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
-                Shop
-              </li>{" "}
-            </Link>
-            <Link href="/repairs">
-              <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
-                Repair
-              </li>
-            </Link>
-            <Link href="/signUp">
-              <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
-                sign up
-              </li>
-            </Link>
-            <Link href="/">
-              <li className="regular-16 text-gray-50 flex-center cursor-pointer my-2 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-red-700">
-                My Orders
-              </li>
-            </Link>
-          </ul>
-        )}
+        <div
+          className="flexCenter
+ lg:hidden"
+        >
+          {/* Mobile dropdown menu (conditionally rendered) */}
+          {categoriesContent && (
+            <ul className="absolute top-14 gap-12 left-0 right-0 ml-2 mb-2 padding-container justify-around py-12 md:hidden lg:hidden bg-white">
+              {NAV_LINKS.map((link) => (
+                <li key={link.key}>
+                  <button
+                    onClick={() => handleScroll(link.href)}
+                    className="regular-14 text-black flexCenter flex flex-col cursor-pointer pb-1.5 transition-all hover:font-bold border-2 border-y-transparent border-x-transparent hover:border-b-blue-700"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </FadeInOnScroll>
     </nav>
   );

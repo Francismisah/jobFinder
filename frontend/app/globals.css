@@ -147,6 +147,9 @@ body {
   .bold-52 {
     @apply text-[52px] font-[700] leading-[120%];
   }
+  .bold-50 {
+    @apply text-[50px] font-[700] leading-[120%];
+  }
   .bold-45 {
     @apply text-[45px] font-[700] leading-[120%];
   }

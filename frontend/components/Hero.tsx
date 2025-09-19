@@ -67,7 +67,7 @@ const Hero = () => {
   };
   return (
     <section
-      id="hero"
+      id="home"
       className="relative flex items-center justify-center overflow-hidden
         padding-container mb-12"
     >
@@ -85,26 +85,26 @@ const Hero = () => {
 
       <div
         className="relative z-10 rounded-b-lg lg:rounded-5xl 
-          flex-col md:flex-col flex gap-20 lg:pt-44 py-12 pb-32 flexStart
+          flex-col md:flex-col flex gap-20 lg:pt-44 py-12 pb-32
           md:gap-28 lg:py-36 max-container  xl:flex-row justify-between w-full"
       >
-        <div className="flex flex-1  mt-28 xl:w-1/3">
+        <div className="flex flex-1  mt-28 xl:w-2/3">
           <FadeInOnScroll>
             {" "}
-            <p className="regular-12  lg:regular-20 my-2 flexCenter gap-1 lg:w-1/2 justify-start text-left items-start  text-white uppercase">
+            <p className="regular-12  lg:regular-18 my-2 flexCenter gap-1  justify-start text-left items-start  text-white uppercase">
               <span className="border-b-2 lg:px-12  px-4  border-white" />
               <span>empowering businesses to grow smarter</span>
             </p>
-            <h1 className="bold-24 lg:bold-52 my-2 text-blue-900 uppercase">
+            <h1 className="bold-24 lg:bold-45 my-2 text-blue-900 uppercase">
               Strategic finance &
             </h1>
-            <h1 className="bold-24 lg:bold-52 my-2 text-blue-400 uppercase">
+            <h1 className="bold-24 lg:bold-45 my-2 text-blue-400 uppercase">
               Consulting Solutions
             </h1>
-            <h1 className="bold-24 lg:bold-52 my-2 text-blue-100 uppercase">
+            <h1 className="bold-24 lg:bold-45 my-2 text-blue-100 uppercase">
               for lasting impact.
             </h1>
-            <p className="regular-14 lg:regular-16  mt-5  mb-10  text-left lg:max-w-[600px]  text-white ">
+            <p className="regular-14 lg:regular-16  mt-5  mb-10  text-left lg:max-w-[400px]  text-white ">
               We help companies make confident decisions with expert financial
               guidance, tailored strategies, and data-driven consulting designed
               to fuel sustainable success.
