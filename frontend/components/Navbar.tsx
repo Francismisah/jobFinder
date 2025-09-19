@@ -115,13 +115,16 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu toggle button */}
-            <section className="">
+            <section
+              className="flexCenter
+ lg:hidden"
+            >
               <button onClick={handleCategorySelection}>
                 {categoriesContent ? (
                   <div>
                     <Button
                       type="button"
-                      title="Get Started"
+                      title=""
                       icon="/mesu.svg"
                       variant="btn_red"
                     />
@@ -130,7 +133,7 @@ const Navbar = () => {
                   <div>
                     <Button
                       type="button"
-                      title="Get Started"
+                      title=""
                       icon="/mesu.svg"
                       variant="btn_red"
                     />
