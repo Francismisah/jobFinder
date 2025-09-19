@@ -2,7 +2,7 @@ import React from "react";
 import FadeInOnScroll from "./FadeInOnScroll";
 import Button from "./Button";
 import Image from "next/image";
-import { SKILLED_URL } from "@/constants";
+
 
 const Faqs = () => {
   return (
@@ -18,7 +18,7 @@ const Faqs = () => {
         <div className=" text-left flexCenter py-6 lg:py-0 flex flex-col lg:flex-row gap-6">
           <div className=" space-y-6 w-1/2  text-left justify-start items-start">
             <div className="bg-blue-700 text-white px-2 py-2 text-center rounded-full lg:w-1/4">
-              <p className="medium-16">FAQ'S</p>
+              <p className="medium-16">FAQ&apos;S</p>
             </div>
             <h1 className="capitalize bold-20 lg:max-w-[300px] text-white font-paragraph my-8 lg:bold-40 ">
               Frequently Asked Questions

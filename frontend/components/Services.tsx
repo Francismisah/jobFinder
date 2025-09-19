@@ -128,7 +128,7 @@ const Services = () => {
               <p className="regular-14 xl:regular-16 mt-5 text-white">
                 Starting from the anxiety of the new date when visiting a new
                 firm, the possibility of getting the wrong service is very
-                large. That's why we are here for those of you who want to have
+                large. That&apos;s why we are here for those of you who want to have
                 great service and Consultation.
               </p>
             </div>

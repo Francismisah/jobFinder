@@ -127,7 +127,7 @@ const Hero = () => {
                 Book free consultation
               </h1>
               <p className="regular-14 lg:regular-16 text-gray-50 mb-2 text-left max-w-[400px]">
-                fill out the form below, and we'll arrange a consultation at a
+                fill out the form below, and we&apos;ll arrange a consultation at a
                 time most suitable for you.
               </p>
               {error && (

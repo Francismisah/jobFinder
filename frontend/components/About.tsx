@@ -73,7 +73,7 @@ const About = () => {
                   Creative solutions
                 </h2>
                 <p className="regular-14 mt-2 lg:max-w-[500px] text-gray-30 lg:regular-16">
-                  innovative thinking meets smart strategy to solve today's
+                  innovative thinking meets smart strategy to solve today&apos;s
                   toughest business challenges
                 </p>
               </div>
