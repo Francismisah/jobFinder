@@ -8,6 +8,16 @@ import FadeInOnScroll from "./FadeInOnScroll";
 import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const handleContactClick = () => {
+    const phoneNumber = "+2347040192470"; // Replace with your number
+    const message = "Hello, I would like to create a website";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   const router = useRouter();
 
   const handleScroll = useCallback(
@@ -98,7 +108,12 @@ const Navbar = () => {
           {/* Desktop action buttons/icons */}
           <div className="lg:flexCenter gap-3 hidden">
             <Link href="/">
-              <Button type="button" title="Contact Now" variant="btn_green" />
+              <Button
+                type="button"
+                title="Contact Now"
+                variant="btn_green"
+                onClick={handleContactClick}
+              />
             </Link>
             <div className="flexCenter gap-4">
               <Image
