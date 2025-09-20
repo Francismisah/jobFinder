@@ -5,7 +5,7 @@ import FadeInOnScroll from "./FadeInOnScroll";
 import { SKILLED_URL } from "@/constants";
 
 const About = () => {
-   const scrollToServices = () => {
+  const scrollToServices = () => {
     const accomadationPage = document.getElementById("services");
     if (accomadationPage) {
       accomadationPage.scrollIntoView({
@@ -59,35 +59,50 @@ const About = () => {
               <p className="medium-16">ABOUT US</p>
             </div>
             <h1 className="capitalize bold-20 lg:max-w-[500px] font-paragraph my-8 lg:bold-40 ">
-              Strategic partners in career growth
+              Strategic partners in business growth
             </h1>
             <p className="regular-12 text-gray-30 my-2 lg:max-w-[500px] lg:regular-16">
               {" "}
-              We help people navigate to thier dream career path or job with
-              tailored strateges, pratical insights, and long-term vision
+              We help people navigate to thier dream digital business platform
+              with tailored strateges, pratical insights, and long-term vision
             </p>
             <div className="mt-10">
               {" "}
-              <div className="mt-10">
+              <div className="mt-10 gap-4 flexCenter">
+                <Image
+                  className="  "
+                  src="/pen.png"
+                  alt="person"
+                  width={80}
+                  height={80}
+                />
+<div>
                 <h2 className=" capitalize bold-16 lg:bold-20">
                   Creative solutions
                 </h2>
                 <p className="regular-14 mt-2 lg:max-w-[500px] text-gray-30 lg:regular-16">
                   innovative thinking meets smart strategy to solve today&apos;s
                   toughest business challenges
-                </p>
+                </p></div>
               </div>
             </div>
             <div>
               {" "}
-              <div className="mt-6">
+              <div className="mt-10 gap-4 flexCenter">
+                <Image
+                  className="  "
+                  src="/bulb.png"
+                  alt="person"
+                  width={100}
+                  height={100}
+                /><div>
                 <h2 className=" capitalize  bold-16 lg:bold-20">
                   Actionable Solutions
                 </h2>
                 <p className="regular-14 text-gray-30 mt-2 lg:max-w-[500px] lg:regular-16">
                   Real-world recommendations that offers the perfect space or
                   company for your carrer path
-                </p>
+                </p></div>
               </div>
             </div>
             <div className=" border-4 border-x-transparent border-t-transparent border-b-blue-950 rounded-sm ">

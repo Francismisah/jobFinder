@@ -4,6 +4,7 @@ import Button from "./Button";
 import FadeInOnScroll from "./FadeInOnScroll";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Services from "./Services";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -96,18 +97,19 @@ const Hero = () => {
               <span>empowering businesses to grow smarter</span>
             </p>
             <h1 className="bold-24 lg:bold-45 my-2 text-blue-900 uppercase">
-              Strategic finance &
+              Where Great Websites and
             </h1>
             <h1 className="bold-24 lg:bold-45 my-2 text-blue-400 uppercase">
-              Consulting Solutions
+              Great Partnerships Begin
             </h1>
             <h1 className="bold-24 lg:bold-45 my-2 text-blue-100 uppercase">
               for lasting impact.
             </h1>
             <p className="regular-14 lg:regular-16  mt-5  mb-10  text-left lg:max-w-[400px]  text-white ">
-              We help companies make confident decisions with expert financial
-              guidance, tailored strategies, and data-driven consulting designed
-              to fuel sustainable success.
+              We connect businesses with vetted web developers to build, scale,
+              and launch with confidence. Eliminate the guesswork of hiring. Get
+              a dedicated developer perfectly suited for your project&apos;s
+              success.
             </p>
             <div className="mt-4">
               <Button
@@ -124,11 +126,11 @@ const Hero = () => {
           <FadeInOnScroll>
             <div className="flex flex-col flex-1 ">
               <h1 className="bold-26  tracking-widest my-4 text-left leading-relaxed text-blue-70">
-                Book free consultation
+                Book a Web Developer
               </h1>
               <p className="regular-14 lg:regular-16 text-gray-50 mb-2 text-left max-w-[400px]">
-                fill out the form below, and we&apos;ll arrange a consultation at a
-                time most suitable for you.
+                fill out the form below, and we&apos;ll arrange a web developer
+                that is suitable for you.
               </p>
               {error && (
                 <div
@@ -145,7 +147,7 @@ const Hero = () => {
                   role="alert"
                 >
                   <span className="block sm:inline">
-                    Thank you! Your consultation has been confirmed.
+                    Thank you! Your web developer has been arranged.
                   </span>
                 </div>
               ) : (
@@ -228,7 +230,7 @@ const Hero = () => {
                       onChange={(e) => setDescription(e.target.value)}
                       rows={4}
                       className="shadow-sm appearance-none border border-gray-300 rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200 ease-in-out"
-                      placeholder="Anything else you would like us to know"
+                      placeholder="Tell us about your company"
                     ></textarea>
                   </div>
                   {/* Terms and Conditions Checkbox */}
